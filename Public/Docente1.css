@@ -1,0 +1,168 @@
+/* Estilos generales para la interfaz de Docente */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7e1; /* Fondo verde claro */
+    color: #333;
+}
+
+/* Header con el título y el menú de usuario */
+header {
+    background-color: #2c6b2f; /* Menú verde oscuro */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container h1 {
+    margin: 0;
+}
+
+/* Menú de usuario en la esquina superior derecha */
+.user-profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer; /* Para indicar que es interactivo */
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-menu ul {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50px; /* Ajustado para estar justo debajo del icono */
+    background-color: #2c6b2f; /* Fondo del menú */
+    list-style-type: none;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.user-profile.active .user-menu ul {
+    display: block;
+}
+
+.user-menu li {
+    padding: 10px;
+}
+
+.user-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.user-menu a:hover {
+    background-color: #23592d;
+}
+
+/* Menú de navegación */
+nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    background-color: #2c6b2f;
+    padding: 10px;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: #23592d;
+}
+
+nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #2c6b2f;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+/* Estilo para la sección de instrucciones */
+#instrucciones {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#instrucciones h2 {
+    text-align: center;
+    color: #2c6b2f;
+}
+
+#textarea-instrucciones {
+    width: 100%;
+    height: 150px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+#asignatura {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #2c6b2f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #23592d;
+}
+
+.dropdown {
+    display: none; /* Ocultar por defecto */
+    position: absolute;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown ul li {
+    padding: 5px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown ul li:last-child {
+    border-bottom: none;
+}

@@ -1,0 +1,100 @@
+/* Estilos generales para la página de Actividades */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Fondo gris claro */
+    color: #333;
+}
+
+/* Header con el título y el menú de usuario */
+header {
+    background-color: #2c6b2f; /* Menú verde oscuro */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container h1 {
+    margin: 0;
+}
+
+/* Menú de usuario en la esquina superior derecha */
+.user-profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-menu ul {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50px; /* Ajustado para estar justo debajo del icono */
+    background-color: #2c6b2f; /* Fondo del menú */
+    list-style-type: none;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.user-profile.active .user-menu ul {
+    display: block;
+}
+
+.user-menu li {
+    padding: 10px;
+}
+
+.user-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.user-menu a:hover {
+    background-color: #23592d;
+}
+
+/* Menú de navegación */
+nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    background-color: #2c6b2f;
+    padding: 10px;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: #23592d;
+}
+
+/* Estilos para la lista de actividades */
+#actividades-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#actividades-list li {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

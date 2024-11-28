@@ -1,0 +1,267 @@
+/* Restablecer algunos estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del cuerpo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background-color: #00796b;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Menú de usuario */
+.user-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.user-profile .user-icon {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.user-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.user-menu li {
+    margin: 0 15px;
+}
+
+.user-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.user-menu a:hover {
+    color: #ffeb3b;
+}
+
+/* Tabla de actividades */
+#actividades-lista {
+    margin: 30px auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+#actividades-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#actividades-table thead {
+    background-color: #00796b;
+    color: white;
+}
+
+#actividades-table th, #actividades-table td {
+    padding: 12px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+#actividades-table th {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+#actividades-table tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#actividades-table tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+#actividades-table td {
+    color: #555;
+}
+
+/* Colores para cada columna */
+#actividades-table td:nth-child(5) {
+    font-weight: bold;
+    color: #e53935; /* Color rojo para el estado */
+}
+
+#actividades-table td:nth-child(7) a {
+    color: #00796b;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#actividades-table td:nth-child(7) a:hover {
+    color: #004d40;
+}
+
+/* Estilos para enlaces y botones */
+a {
+    color: #00796b;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Botón "Revisar Actividad" */
+.btn-revisar {
+    background-color: #00796b; /* Color principal */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño de fuente */
+    font-weight: 600; /* Peso de la fuente */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    cursor: pointer; /* Cambiar el cursor al pasar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones */
+}
+
+.btn-revisar:hover {
+    background-color: #004d40; /* Color más oscuro al pasar */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.btn-revisar:active {
+    background-color: #00332c; /* Color más oscuro al hacer clic */
+    transform: translateY(0); /* Quitar la elevación */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    #actividades-lista {
+        width: 100%;
+    }
+
+    #actividades-table {
+        font-size: 0.9rem;
+    }
+
+    .user-profile {
+        flex-direction: column;
+    }
+
+    .user-profile .user-icon {
+        margin-bottom: 10px;
+    }
+
+    .user-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user-menu li {
+        margin: 10px 0;
+    }
+
+    #actividades-table td, #actividades-table th {
+        padding: 8px; /* Reducir el padding en pantallas más pequeñas */
+    }
+
+    /* Ajustes en la tabla para mejor visibilidad en pantallas pequeñas */
+    #actividades-table thead {
+        font-size: 0.9rem;
+    }
+
+    #actividades-table td {
+        font-size: 0.9rem;
+    }
+
+    .btn-revisar {
+        font-size: 0.9rem; /* Reducir tamaño de fuente en pantallas pequeñas */
+        padding: 8px 12px; /* Ajustar espaciado interno */
+    }
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;  /* Inicialmente oculto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8); /* Fondo oscuro */
+    padding-top: 60px;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#caption {
+    margin: 15px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+}

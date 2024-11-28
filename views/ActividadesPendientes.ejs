@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actividades Pendientes</title>
+    <link rel="stylesheet" href="Alumno.css">
+</head>
+<body>
+    <h1>Actividades Pendientes</h1>
+    <% if (actividades.length > 0) { %>
+        <ul>
+            <% actividades.forEach(actividad => { %>
+                <li>
+                    <strong><%= actividad.nombre_actividad %></strong><br>
+                    <p><%= actividad.descripcion %></p>
+                    <small>Fecha de entrega: <%= actividad.fecha_entrega %></small>
+                </li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p>No tienes actividades pendientes.</p>
+    <% } %>
+</body>
+</html>

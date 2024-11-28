@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <style>
+        /* Reset y estilos base */
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #F8FAFC; /* Fondo claro sofisticado */
+        }
+    
+        h3 {
+            text-align: center;
+            color: #2C3E50; /* Azul oscuro elegante */
+            font-weight: 700;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+    
+        /* Contenedor del formulario */
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            border-radius: 12px;
+            background-color: #FFFFFF; /* Fondo blanco puro */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Sombra moderna */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+    
+        .form-container:hover {
+            transform: translateY(-5px); /* Efecto de elevación */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+    
+        /* Campos de entrada */
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 14px;
+            margin: 12px 0;
+            border: 1px solid #BDC3C7; /* Borde gris claro */
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+            color: #2C3E50;
+            background-color: #FDFEFE; /* Fondo claro */
+            transition: border-color 0.3s;
+        }
+    
+        input[type="text"]:focus, input[type="password"]:focus {
+            border-color: #3498DB; /* Azul claro */
+            outline: none;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
+    
+        /* Botón de inicio de sesión */
+        input[type="submit"] {
+            width: 100%;
+            padding: 14px;
+            margin-top: 20px;
+            background-color: #27AE60; /* Verde principal */
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+    
+        input[type="submit"]:hover {
+            background-color: #1E8449; /* Verde más oscuro */
+            transform: scale(1.03); /* Ampliación ligera */
+        }
+    
+        /* Enlace de registro */
+        .register-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #3498DB; /* Azul claro */
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+    
+        .register-link:hover {
+            color: #1E6FA3; /* Azul más oscuro */
+            text-decoration: underline;
+        }
+    
+        /* Etiquetas */
+        label {
+            font-size: 15px;
+            color: #34495E; /* Gris azulado */
+            font-weight: 500;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="form-container">
+        <h3>Hola Alumno, Inicia Sesión</h3>
+        <form action="/login" method="post">
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" name="usuario" placeholder="Ingresa tu nombre de usuario">
+
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="cont" placeholder="Ingresa tu contraseña">
+
+            <input type="submit" value="Iniciar sesión">
+
+            <a href="registrar.html" class="register-link">¿No tienes cuenta? Regístrate</a>
+        </form>
+    </div>
+</body>
+</html>

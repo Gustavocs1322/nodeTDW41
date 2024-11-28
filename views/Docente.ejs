@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz Docente</title>
+    <link rel="stylesheet" href="Docente.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Bienvenido Docente <%= usuario %></h1>
+            <!-- Menú de Usuario -->
+            <div class="user-profile" id="user-profile">
+                <img src="../UNIVERSIDAD_SUSTENTABLE_01.png" alt="Foto de perfil" class="profile-pic">
+                <div class="user-menu" id="user-menu">
+                    <ul>
+                        <li><a href="#" id="logout-btn">Cerrar sesión</a></li>
+                        <li><a href="#">Ajustes</a></li>
+                        <li><a href="#">Acerca de</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Menú de navegación -->
+        <nav>
+            <ul>
+                <li><a href="#" id="inicio">Inicio</a></li>
+                <li>
+                    <a href="#" id="actividad-link">Adjuntar actividad</a>
+                    <div class="dropdown" id="dropdown-actividad" style="display: none;">
+                        <button id="btn-adjuntar">Adjuntar</button>
+                    </div>
+                </li>
+                <li>
+                    <a href="/actividades-revisar" id="actividades-revisar-link">Actividades por Revisar</a>
+                    <div id="dropdown-actividades-revisar" class="dropdown-menu" style="display: none;">
+                        <button id="revisar-actividad">Revisar actividad</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Botones de asignaturas -->
+        <section id="asignaturas-section" style="display: none;">
+            <h3>Selecciona una asignatura</h3>
+            <div class="botones-asignaturas">
+                <button class="asignatura-btn" data-nombre="IB1">IB1</button>
+                <button class="asignatura-btn" data-nombre="IB2">IB2</button>
+                <button class="asignatura-btn" data-nombre="IB3">IB3</button>
+                <button class="asignatura-btn" data-nombre="IB4">IB4</button>
+                <button class="asignatura-btn" data-nombre="IB5">IB5</button>
+                <button class="asignatura-btn" data-nombre="IB6">IB6</button>
+                <button class="asignatura-btn" data-nombre="JB1">JB1</button>
+                <button class="asignatura-btn" data-nombre="HB1">HB1</button>
+                <button class="asignatura-btn" data-nombre="HB2">HB2</button>
+            </div>
+            <label for="fecha-entrega">Fecha de entrega:</label>
+            <input type="date" id="fecha-entrega">
+            <button id="subir-actividad">Subir actividad</button>
+        </section>
+    
+        <!-- Sección de imágenes -->
+        <section id="imagenes-section">
+            <img src="Docente1.jpg" alt="Imagen 1" class="imagen">
+            <img src="Docente2.jpg" alt="Imagen 2" class="imagen">
+            <img src="Docente3.jpg" alt="Imagen 3" class="imagen">
+            <img src="Docente4.jpg" alt="Imagen 4" class="imagen">
+        </section>
+    </main>
+    
+
+    <script src="Docente.js"></script>
+</body>
+</html>
+
+

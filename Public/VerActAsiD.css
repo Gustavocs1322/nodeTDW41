@@ -1,0 +1,81 @@
+/* Estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f7f4; /* Fondo claro con un toque verde */
+    margin: 0;
+    padding: 20px;
+    color: #2c3e50; /* Texto oscuro */
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #27ae60; /* Verde principal */
+    margin-bottom: 20px;
+}
+
+/* Tabla */
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Encabezado de la tabla */
+table thead {
+    background-color: #27ae60; /* Verde principal */
+    color: #ffffff; /* Texto blanco */
+}
+
+table th {
+    padding: 15px;
+    text-align: left;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+/* Filas de la tabla */
+table tbody tr {
+    border-bottom: 1px solid #eaeaea;
+    transition: background-color 0.3s ease;
+}
+
+table tbody tr:hover {
+    background-color: #f1f8f5; /* Suave toque verde al pasar el ratón */
+}
+
+/* Celdas */
+table td {
+    padding: 15px;
+    font-size: 0.95rem;
+    color: #2c3e50;
+}
+
+/* Mensaje de "No hay actividades disponibles" */
+table td[colspan="5"] {
+    text-align: center;
+    font-style: italic;
+    color: #bdc3c7; /* Gris claro */
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    table th,
+    table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}

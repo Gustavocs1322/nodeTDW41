@@ -1,0 +1,284 @@
+/* Estilo general de la página */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+}
+
+header {
+    background-color: #2c3e50;
+    padding: 20px 30px;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    position: relative;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: #2980b9;
+}
+
+/* Menú de usuario */
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-menu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    top: 40px;
+    right: 0;
+}
+
+.user-menu ul {
+    list-style: none;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.user-menu ul li {
+    margin: 10px 0;
+}
+
+.user-menu ul li a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.user-menu ul li a:hover {
+    color: #2980b9;
+}
+
+/* Menú desplegable para adjuntar actividad */
+#actividad-link {
+    cursor: pointer;
+}
+
+#dropdown-actividad {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+#actividad-link.active + #dropdown-actividad {
+    display: block;
+}
+
+.dropdown button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    width: 100%;
+    text-align: left;
+    border-radius: 6px;
+}
+
+.dropdown button:hover {
+    background-color: #2980b9;
+}
+
+/* Nuevo botón Actividades Por Revisar */
+#actividades-revisar-link {
+    cursor: pointer;
+}
+
+#dropdown-actividades-revisar {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+#actividades-revisar-link.active + #dropdown-actividades-revisar {
+    display: block;
+}
+
+#btn-revisar {
+    background-color: #e67e22;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    width: 100%;
+    text-align: left;
+    border-radius: 6px;
+}
+
+#btn-revisar:hover {
+    background-color: #d35400;
+}
+
+/* Estilo para las asignaturas */
+#asignaturas-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#asignaturas-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.botones-asignaturas {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.asignatura-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.asignatura-btn:hover {
+    background-color: #2980b9;
+}
+
+#fecha-entrega {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+#subir-actividad {
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#subir-actividad:hover {
+    background-color: #27ae60;
+}
+
+/* Estilos para las imágenes */
+#imagenes-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 80%;
+}
+
+#imagenes-section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo responsivo para móviles */
+@media (max-width: 768px) {
+    header .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header nav a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .botones-asignaturas {
+        justify-content: center;
+    }
+
+    .asignatura-btn {
+        flex: 1 1 calc(100% - 20px);
+    }
+
+    #imagenes-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    header .header-container {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

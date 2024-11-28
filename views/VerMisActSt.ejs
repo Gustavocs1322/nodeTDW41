@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Mis Actividades</title>
+    <link rel="stylesheet" href="VerMisActSt.css">
+</head>
+<body>
+    <header>
+        <h1>Mis Actividades</h1>
+    </header>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre de la Actividad</th>
+                    <th>Descripción</th>
+                    <th>Fecha de Asignación</th>
+                    <th>Fecha Límite</th>
+                    <th>Subir Imagen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let actividad of actividades) { %>
+                <tr>
+                    <td><%= actividad.id_actividad %></td>
+                    <td><%= actividad.nombre_actividad %></td>
+                    <td><%= actividad.descripcion %></td>
+                    <td><%= actividad.fecha_asignacion %></td>
+                    <td><%= actividad.fecha_limite %></td>
+                    <td>
+                        <!-- Botón para abrir el formulario de subida -->
+                        <button class="btn-subir-imagen" onclick="mostrarFormulario(<%= actividad.id_actividad %>)">Subir Imagen</button>
+                        
+                        <!-- Formulario para subir imagen -->
+                        <form id="form-subir-<%= actividad.id_actividad %>" class="form-subir-imagen" action="/subir-imagen" method="POST" enctype="multipart/form-data" style="display: none;">
+                            <input type="file" name="imagen" accept="image/*" required>
+                            <input type="hidden" name="id_actividad" value="<%= actividad.id_actividad %>">
+                            <button type="submit">Subir</button>
+                        </form>
+                    </td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </main>
+
+    <script>
+        // Función para mostrar u ocultar el formulario de subida de imagen
+        function mostrarFormulario(id_actividad) {
+            const formulario = document.getElementById(`form-subir-${id_actividad}`);
+            // Toggle de visibilidad
+            if (formulario.style.display === 'none') {
+                formulario.style.display = 'block'; // Mostrar el formulario
+            } else {
+                formulario.style.display = 'none'; // Ocultar el formulario
+            }
+        }
+    </script>
+</body>
+</html>

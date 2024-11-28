@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Actividades</title>
+    <link rel="stylesheet" href="ActDocAlum.css">
+
+</head>
+<body>
+    <h1>Lista de Actividades</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre de Asignatura</th>
+                <th>Instrucciones</th>
+                <th>Fecha</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (typeof actividades !== 'undefined' && actividades.length > 0) { %>
+                <% actividades.forEach(function(actividad) { %>
+                    <tr>
+                        <td><%= actividad.id %></td>
+                        <td><%= actividad.Nombre_Asignatura %></td>
+                        <td><%= actividad.Instrucciones %></td>
+                        <td><%= actividad.Fecha %></td>
+                        <td><%= actividad.Estado %></td>
+                    </tr>
+                <% }); %>
+            <% } else { %>
+                <tr>
+                    <td colspan="5">No hay actividades disponibles</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+</html>

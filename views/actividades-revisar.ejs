@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades por Revisar</title>
+    <link rel="stylesheet" href="actividades-revisar.css"> <!-- Asegúrate de tener tu archivo CSS -->
+</head>
+
+<body>
+
+    <!-- Encabezado y menú de usuario -->
+    <header>
+        <h1>Actividades por Revisar</h1>
+        <div class="user-profile">
+            <img src="UNIVERSIDAD_SUSTENTABLE_01.png" alt="Perfil de usuario" class="user-icon">
+            <div class="user-menu">
+            </div>
+        </div>
+    </header>
+
+    <!-- Tabla para mostrar las actividades -->
+    <section id="actividades-lista">
+        <table id="actividades-table">
+            <thead>
+                <tr>
+                    <th>Actividad</th>
+                    <th>Nombre Actividad</th>
+                    <th>Alumno</th>
+                    <th>Estado</th>
+                    <th>Ver Evidencia</th>
+                </tr>
+            </thead>
+            <tbody id="actividades-body">
+                <% actividades.forEach(actividad => { %>
+                    <tr>
+                        <td><%= actividad.id_actividad %></td>
+                        <td><%= actividad.nombre_actividad %></td>
+                        <td><%= actividad.id_usuario %></td>
+                        <td><%= actividad.estatus %></td>
+                        <!-- Enlace para ver la imagen -->
+                        <td>
+                            <a href="javascript:void(0);" class="ver-evidencia" data-imagen="<%= actividad.ruta_evidencia %>" aria-label="Ver evidencia">Ver Evidencia</a>
+                        </td>
+                        <td>
+                            <button class="btn-revisar" data-id="<%= actividad.id_actividad %>">Revisar Actividad</button>
+                        </td>                        
+                    </tr>
+                <% }); %>
+            </tbody>
+            
+        </table>
+    </section>
+
+    <!-- El modal donde se mostrará la imagen -->
+    <div id="modal-imagen" class="modal">
+        <span id="close-modal" class="close" aria-label="Cerrar modal">&times;</span>
+        <img id="imagen-modal" class="modal-content" alt="Imagen de la actividad" />
+        <div id="caption"></div>
+    </div>
+
+    <script src="actividades-revisar.js"></script> <!-- Enlazar el archivo JavaScript -->
+</body>
+
+</html>

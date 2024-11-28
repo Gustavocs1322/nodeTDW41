@@ -1,0 +1,110 @@
+<head>
+    <title>Pagina reparadora</title>
+</head>
+
+<body id="demo3" style="background-color: blueviolet;">
+
+
+    <button onclick="apagar()">apagar</button>
+    <br><br>
+    <p style="text-align: center;"><h2>GRADOS C</h2>
+    <input id="grados GC">
+    <button onclick="ConvertirCF()">C->F</button>
+    <button onclick="ConvertirCK()">C->K</button>
+    </p>
+    <br><br>
+    <p style="text-align: center;"><h2 >GRADOS F</h2>
+    <input id="grados GF">
+    <button onclick="ConvertirFC()">F->C</button>
+    <button onclick="ConvertirFK()">F->K</button>
+    </p>
+    <br><br>
+    <p style="text-align: center;"><h2>GRADOS K</h2>
+    <input id="grados GK">
+    <button onclick="ConvertirKC()">K->C</button>
+    <button onclick="ConvertirKF()">K->F</button>
+    </p>
+    <br><br><br><br>
+
+    <table style="border: 1px solid #ffffff;" >
+        <tr>
+            <th>
+                <h1>Resultado:</h1>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <h1 id="print" style="text-align: center;">Grados</h1>
+            </td>
+        </tr>
+    </table>
+
+
+    <script>
+        
+
+        let enc = 1;
+        function apagar() {
+            if (enc == 1) {
+                document.getElementById("demo3").style.backgroundColor = "black"
+                enc = 0;
+            }
+            else {
+                document.getElementById("demo3").style.backgroundColor = "orange"
+                enc = 1
+            }
+        }
+        ///YA
+        function ConvertirCF() {
+            let cent = 0;
+            cent = document.getElementById("grados GC").value;
+            cent = ((9 * cent) / 5) + 32
+            //alert("F="+ cent)
+            document.getElementById("print").innerHTML = "F=" + cent;
+        }
+
+        function ConvertirCK() {
+            let cent = 0;
+            cent = document.getElementById("grados GC").value;
+            cent = (1 * cent) + (273.15)
+            //alert("K="+ cent)
+            document.getElementById("print").innerHTML = "K=" + cent;
+        }
+        ///YA
+        function ConvertirFC() {
+            let cent = 0;
+            cent = document.getElementById("grados GF").value;
+            cent = ((5) * (cent - 32)) / (9)
+            //alert("C="+ cent)
+            document.getElementById("print").innerHTML = "C=" + cent;
+        }
+        ///YA
+        function ConvertirFK() {
+            let cent = 0;
+            cent = document.getElementById("grados GF").value;
+            cent = (((5) * (cent - 32)) / (9)) + 273.15
+            //alert("K="+ cent)
+            document.getElementById("print").innerHTML = "K=" + cent;
+        }
+        ///YA
+        function ConvertirKC() {
+            let cent = 0;
+            cent = document.getElementById("grados GK").value;
+            cent = cent - 273.15
+            //alert("C="+ cent)
+            document.getElementById("print").innerHTML = "C=" + cent;
+        }
+        ///YA
+        function ConvertirKF() {
+            let cent = 0;
+            cent = document.getElementById("grados GK").value;
+            cent = 9 * ((cent - 273.15) / 5) + 32
+            //alert("F="+ cent)
+            document.getElementById("print").innerHTML = "F=" + cent;
+        }
+
+    </script>
+
+</body>
+
+</html>
