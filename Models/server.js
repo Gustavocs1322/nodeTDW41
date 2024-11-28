@@ -11,7 +11,7 @@ const fs = require('fs');
 class Server {
     constructor() {
         this.app = express();
-        this.conectarBD();
+        //this.conectarBD();
         this.port = process.env.PORT || 5000;
 
         this.middlewares();
@@ -20,7 +20,7 @@ class Server {
     }
 
     // Conexión a la base de datos
-    conectarBD() {
+   // conectarBD() {
         this.con = mysql.createPool({
             host: "localhost",
             user: "root",
