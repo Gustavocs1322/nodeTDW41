@@ -20,7 +20,7 @@ class Server {
     }
 
     // Conexión a la base de datos
-   // conectarBD() {
+        conectarBD() {
         this.con = mysql.createPool({
             host: "localhost",
             user: "root",
